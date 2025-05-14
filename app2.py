@@ -52,13 +52,4 @@ if st.button("🔍 Predict"):
         for model, result in results.items():
             st.write(f"**{model}**: {result}")
 
-# Example Visualization (Static Confusion Matrix)
-if st.checkbox("📊 Show Example Confusion Matrix"):
-    y_true = [0, 1, 0, 1, 1, 0]
-    y_pred = [0, 1, 1, 1, 1, 0]
-    cm = confusion_matrix(y_true, y_pred)
-    fig, ax = plt.subplots()
-    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", xticklabels=["Fake", "Real"], yticklabels=["Fake", "Real"])
-    plt.xlabel("Predicted")
-    plt.ylabel("Actual")
-    st.pyplot(fig)
+
